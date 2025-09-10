@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Space+Grotesk:wght@400;500;700"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Detalhes do Nome</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #ff69b4;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-pink-50" style='font-family: "Space Grotesk", sans-serif;'>
+    <div
+      class="relative flex size-full min-h-screen flex-col justify-between group/design-root overflow-x-hidden"
+    >
+      <main class="flex-1">
+        <header class="flex items-center p-4">
+          <button
+            class="flex size-10 shrink-0 items-center justify-center rounded-full text-pink-600"
+          >
+            <span class="material-symbols-outlined text-2xl"> arrow_back </span>
+          </button>
+          <h1 class="flex-1 text-center text-lg font-bold text-pink-800 pr-10">
+            Detalhes do Nome
+          </h1>
+        </header>
+        <div class="px-6 py-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-4xl font-bold text-pink-900">Nome</h2>
+            <button
+              class="flex size-12 shrink-0 items-center justify-center rounded-full text-red-500 bg-red-100"
+            >
+              <span class="material-symbols-outlined text-2xl">
+                favorite
+              </span>
+            </button>
+          </div>
+          <p class="mt-4 text-base text-gray-700">
+            Descrição do nome e seu significado...
+          </p>
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="rounded-lg bg-yellow-200/60 p-4 shadow-sm">
+              <h3 class="text-sm font-medium text-yellow-800">Origem</h3>
+              <p class="mt-1 text-lg font-semibold text-yellow-900">
+                <strong class="origem-nome">Latina</strong>
+              </p>
+            </div>
+            <div class="rounded-lg bg-teal-200/60 p-4 shadow-sm">
+              <h3 class="text-sm font-medium text-teal-800">Significado</h3>
+              <p class="mt-1 text-lg font-semibold text-teal-900">
+                <strong class="significado-curto">Amanhecer</strong>
+              </p>
+            </div>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-pink-800">Popularidade</h3>
+            <div class="mt-3 h-2 w-full rounded-full bg-pink-200/70">
+              <div
+                class="h-2 rounded-full bg-[var(--primary-color)]"
+                style="width: 0%"
+              ></div>
+            </div>
+            <p class="mt-3 text-base text-gray-700">
+              A popularidade do nome...
+            </p>
+          </div>
+          <div class="mt-8">
+            <h3 class="text-xl font-bold text-pink-800">
+              Variações e Nomes Semelhantes
+            </h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <!-- Variações preenchidas por JS -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="sticky bottom-0 border-t border-pink-100 bg-white/80 backdrop-blur-sm">
+        <nav class="flex justify-around p-2">
+          <a
+            class="flex w-full flex-col items-center justify-center gap-1 rounded-lg py-2 text-gray-500 transition-colors hover:bg-pink-100/50"
+            href="index.html"
+          >
+            <span class="material-symbols-outlined"> auto_awesome </span>
+            <span class="text-xs font-medium">Gerar</span>
+          </a>
+          <a
+            class="flex w-full flex-col items-center justify-center gap-1 rounded-lg py-2 text-[var(--primary-color)] transition-colors hover:bg-pink-100/50"
+            href="salvos.html"
+          >
+            <span class="material-symbols-outlined"> bookmark </span>
+            <span class="text-xs font-medium">Salvos</span>
+          </a>
+          <a
+            class="flex w-full flex-col items-center justify-center gap-1 rounded-lg py-2 text-gray-500 transition-colors hover:bg-pink-100/50"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> favorite </span>
+            <span class="text-xs font-medium">Favoritos</span>
+          </a>
+        </nav>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
