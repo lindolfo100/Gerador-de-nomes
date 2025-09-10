@@ -25,15 +25,18 @@ def handler(event, context):
         current_favorites = response.json().get('record', [])
 
         # 3. Remover o nome se existir
-        if name_to_remove in current_favorites:
-            current_favorites.remove(name_to_remove)
+        # A lista agora é de objetos, então precisamos encontrar o objeto certo para remover
+        original_length = len(current_favorites)
+        # O frontend enviará o objeto completo do nome, então a comparação de dicionário deve funcionar
+        updated_favorites = [fav for fav in current_favorites if fav != name_to_remove]
 
+        if len(updated_favorites) < original_length:
             # 4. Escrever a lista atualizada de volta no JSONBin
             write_headers = {
                 'Content-Type': 'application/json',
                 'X-Master-Key': API_KEY
             }
-            put_response = requests.put(WRITE_URL, headers=write_headers, data=json.dumps(current_favorites))
+            put_response = requests.put(WRITE_URL, headers=write_headers, data=json.dumps(updated_favorites))
             put_response.raise_for_status()
 
             return {'statusCode': 200, 'body': json.dumps({'status': 'success'})}
