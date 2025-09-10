@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const nameList = document.getElementById('name-list');
     const favoritesList = document.getElementById('favorites-list');
+    const suggestionsList = document.getElementById('suggestion-list');
 
-    // 1. Carregar favoritos existentes ao iniciar a página
+    // 1. Carregar nomes iniciais e favoritos existentes
+    loadInitialNames();
     loadFavorites();
 
     // 2. Lidar com o clique para adicionar um favorito
@@ -89,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrapeBtn = document.getElementById('scrape-btn');
     const aiBtn = document.getElementById('ai-btn');
     const statusMessage = document.getElementById('status-message');
-    const suggestionsList = nameList.querySelector('ul');
 
     scrapeBtn.addEventListener('click', async () => {
         statusMessage.textContent = 'Buscando nomes na internet, por favor aguarde...';

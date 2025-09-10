@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <header>
@@ -21,13 +21,8 @@
                 <button id="ai-btn">Gerar Nomes com IA ✨</button>
                 <p id="status-message" class="hidden"></p>
             </div>
-            <ul>
-                {% for name in names %}
-                    <li>
-                        <span>{{ name }}</span>
-                        <button class="favorite-btn">❤️</button>
-                    </li>
-                {% endfor %}
+            <ul id="suggestion-list">
+                <!-- Nomes iniciais e novos aparecerão aqui via JavaScript -->
             </ul>
         </section>
         <aside id="favorites">
@@ -54,6 +49,6 @@
         </div>
     </section>
 
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="static/script.js"></script>
 </body>
 </html>
