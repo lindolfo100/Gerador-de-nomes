@@ -2,11 +2,6 @@
   publish = "public/"
   functions = "netlify/functions/"
 
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
 # Aumenta o timeout para a função de scraping, que pode ser lenta.
 [functions."scraped_names"]
   timeout = 25
