@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha o Nome da Sua Filha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Escolha o Nome Perfeito</h1>
+    </header>
+    <main>
+        <section id="name-list">
+            <h2>Sugestões de Nomes</h2>
+            <div class="actions">
+                <button id="scrape-btn">Buscar Nomes na Internet 🌐</button>
+                <button id="ai-btn">Gerar Nomes com IA ✨</button>
+                <p id="status-message" class="hidden"></p>
+            </div>
+            <ul>
+                {% for name in names %}
+                    <li>
+                        <span>{{ name }}</span>
+                        <button class="favorite-btn">❤️</button>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <aside id="favorites">
+            <h2>Meus Favoritos</h2>
+            <ul id="favorites-list">
+                <!-- Nomes favoritos aparecerão aqui via JavaScript -->
+            </ul>
+        </aside>
+    </main>
+
+    <section id="name-combiner">
+        <h2>Ferramenta de Combinação de Nomes 💑</h2>
+        <div class="combiner-form">
+            <input type="text" id="name1-input" placeholder="Primeiro nome">
+            <span>+</span>
+            <input type="text" id="name2-input" placeholder="Segundo nome">
+            <button id="combine-btn">Combinar</button>
+        </div>
+        <div id="combination-results">
+            <h3>Resultados:</h3>
+            <ul id="combination-list">
+                <!-- Resultados da combinação aparecerão aqui -->
+            </ul>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
