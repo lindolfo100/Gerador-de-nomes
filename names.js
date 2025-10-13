@@ -1,0 +1,22 @@
+const popularNames = [
+    { name: 'MARIA', gender: 'F' },
+    { name: 'ANA', gender: 'F' },
+    { name: 'FRANCISCA', gender: 'F' },
+    { name: 'ANTONIA', gender: 'F' },
+    { name: 'ADRIANA', gender: 'F' },
+    { name: 'JULIANA', gender: 'F' },
+    { name: 'MARCIA', gender: 'F' },
+    { name: 'FERNANDA', gender: 'F' },
+    { name: 'PATRICIA', gender: 'F' },
+    { name: 'ALINE', gender: 'F' },
+    { name: 'JOSE', gender: 'M' },
+    { name: 'JOAO', gender: 'M' },
+    { name: 'ANTONIO', gender: 'M' },
+    { name: 'FRANCISCO', gender: 'M' },
+    { name: 'CARLOS', gender: 'M' },
+    { name: 'PAULO', gender: 'M' },
+    { name: 'PEDRO', gender: 'M' },
+    { name: 'LUCAS', gender: 'M' },
+    { name: 'LUIZ', gender: 'M' },
+    { name: 'MARCOS', gender: 'M' }
+];

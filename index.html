@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Nomes Populares</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nomes Populares no Brasil</h1>
+    </header>
+    <main>
+        <section id="name-generator">
+            <h2>Gerar Nomes</h2>
+            <div class="filters">
+                <label for="gender-filter">Gênero:</label>
+                <select id="gender-filter">
+                    <option value="all">Todos</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+                <label for="name-search-input">Buscar nome:</label>
+                <input type="text" id="name-search-input" placeholder="Digite parte de um nome...">
+            </div>
+            <button id="generate-button">Filtrar</button>
+            <div id="name-list"></div>
+        </section>
+        <section id="favorites">
+            <h2>Meus Nomes Favoritos</h2>
+            <ul id="favorites-list"></ul>
+        </section>
+        <section id="meaning-search">
+            <h2>Buscar Significado</h2>
+            <input type="text" id="meaning-input" placeholder="Digite um nome">
+            <button id="search-meaning-button">Buscar</button>
+            <div id="meaning-result"></div>
+        </section>
+    </main>
+    <script src="names.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
